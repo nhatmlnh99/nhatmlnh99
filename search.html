@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAY 7</title>
+    <style>
+        * {
+            background-color: rgb(223, 189, 195);
+        }
+
+        input {
+            color: #fff;
+            font-family: Nunito;
+            padding: 0;
+            margin: 35px;
+            border: 0;
+            background-color: #ff7575;
+            border-radius: 5px;
+            box-shadow: 0 10px 40px #ff7c7c, 0 0 0;
+            outline: none;
+        }
+
+        input[type="text"] {
+            width: 50%;
+            height: 50px;
+            font-size: 28px;
+            line-height: 1;
+        }
+
+        input[type="text"]::placeholder {
+            color: #ffffff;
+        }
+
+        li {
+            width: 50%;
+            padding: 10px;
+            /* padding-left: 0px; */
+            border: 2px solid white;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="myInput" onkeyup="search()" placeholder="Search for drink..." title="Type in a name" />
+    <ul id="myUL">
+        <li>Mojito</li>
+        <li>Blue Hawail</li>
+        <li>Gin</li>
+        <li>Wine</li>
+
+        <li>B52</li>
+        <li>Coffee</li>
+        <li>Tea</li>
+    </ul>
+
+    <script>
+        function search() {
+            let input, filter, ul, li, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName("li");
+
+            for (let i = 0; i < li.length; i++) {
+                txtValue = li[i].innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    li[i].style.display = "block";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
