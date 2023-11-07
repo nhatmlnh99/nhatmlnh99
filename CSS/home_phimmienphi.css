@@ -7,11 +7,7 @@
 html {
     font-family: sans-serif;
 }
-body {
-    height: 10000px;
-   
-    
-}
+
 .white {
     color: #fff
 }
@@ -19,17 +15,18 @@ body {
 .header {
     width: 100%;
     height: 70px;
-    background-color: #202020;
+    background-color: #000;
     position: fixed;
+    top : 0 ;
     display: flex;
     padding: 0px 150px 0px 150px;
+    z-index: 1000;
     
 }
 
 .logo {
     width: 200px;
-    background: rgba(255, 255, 255, .19);
-    
+    background: #202020;
 
 }
 
@@ -43,7 +40,7 @@ body {
 
 }
 
-.main_header {
+.main-header {
     display: flex;
     height: 70px;
 
@@ -106,15 +103,15 @@ body {
 .search {
     width: 340px;
     height: 40px;
-    margin: 15px 0px 15px 235px ;
+    margin: 15px 0px 15px 256px ;
     line-height: 40px;
     border-radius: 5px;
     
 }
 
 .search .input_search {
-    background-color: #000;
-    /* background: rgba(255, 255, 255, .19); */
+    background-color: #2D2D2D; 
+     /* background: rgba(255, 255, 255, .19);  */
     width: 100%;
     border-radius: 5px;
     position: relative;
@@ -147,15 +144,13 @@ body {
 .input_search .menu-key {
     padding: 0px; 
     overflow-y: auto;
-    display: none 
+    display: none;
 }
 
-.input_search:active .menu-key {
-    /* padding: 10px 8px; 
-    opacity: 1;
-    pointer-events: auto; */
 
-}
+/* .menu-key:hover {
+    display: block;
+} */
 
 .menu-key li {
     color: #fff;
@@ -176,4 +171,233 @@ body {
 }
 .menu-key li:hover {
      background-color: #efefef; 
+}
+
+.my-container {
+    width: 100%;
+    background-color: #424040; 
+    padding: 0px 150px  75px 150px;
+   margin-top: 70px;
+    
+}
+.content {
+    width: 100%;
+    background-color: #151414;
+    height: 2000px;
+    padding: 20px;
+    
+}
+
+.text-slider {
+    padding: 20px;
+}
+.text-slider h3 {
+    padding-left: 10px;
+    border-left: 5px solid #408bea ;
+}
+.img-slider {
+    max-width: 100%;
+    height: 550px;
+    margin-bottom: 100px;
+}
+
+/* thiết lập style cho slideshow container */
+ .slideshow-container {
+   max-width: 100%;
+   position: relative;
+   margin: auto;
+   
+ }
+/* ẩn hình ảnh cho phần tử slideshow */
+ .mySlides {
+   display: none;
+ }
+/* thiết kế nút mũi tên*/
+ .prev, .next {
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   width: auto;
+   margin-top: -22px;
+   padding: 16px;
+   color: white;
+   font-weight: bold;
+   font-size: 18px;
+   transition: 0.6s ease;
+   border-radius: 0 3px 3px 0;
+   user-select: none;
+ }
+/* thiết kế nút mũi tên next nằm phía bên phải */
+ .next {
+   right: 0;
+   border-radius: 3px 0 0 3px;
+ }
+/* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
+ .prev:hover, .next:hover {
+   background-color: rgba(0,0,0,0.8);
+ }
+/* Thiết lập style cho nội dung của mỗi phần tử slideshow */
+ .text {
+   color: #f2f2f2;
+   font-size: 20px;
+   padding: 8px 12px;
+   position: absolute;
+   bottom: 8px;
+   width: 100%;
+   text-align: center;
+ }
+/* Thiết lập style cho số hiển thị của phần tử */
+ .numbertext {
+   color: #f2f2f2;
+   font-size: 12px;
+   padding: 8px 12px;
+   position: absolute;
+   top: 0;
+ }
+/* thiết lập style  nút tròn điều khiển*/
+ .dot {
+   cursor: pointer;
+   height: 15px;
+   width: 15px;
+   margin: 0 2px;
+   background-color: #bbb;
+   border-radius: 50%;
+   display: inline-block;
+   transition: background-color 0.6s ease;
+ }
+.active, .dot:hover {
+   background-color: #717171;
+ }
+/* tạo hiệu ứng chuyển động fade */
+ .fade {
+   -webkit-animation-name: fade;
+   -webkit-animation-duration: 1.5s;
+   animation-name: fade;
+   animation-duration: 1.5s;
+ }
+@-webkit-keyframes fade {
+   from {opacity: .4}
+   to {opacity: 1}
+ }
+@keyframes fade {
+   from {opacity: .4}
+   to {opacity: 1}
+ }
+.main {
+    width: 100%;
+    display: flex;
+    margin: 0px 0px 100px 0px;
+    
+}
+
+.content-main {
+    width: 20%;
+    height:300px ;
+    margin: 0px 10px;
+}
+.content-main .text-content {
+    margin: 20px 0px 40px;
+    width: 100%;
+
+}
+.text-content a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 17px;
+    
+}
+.text-content span {
+    color: #FFFFFF80;
+    font-size: 15px;
+}
+
+
+
+
+
+/* footer */
+.footer {
+width: 100%;
+background-color: #151414;
+height: 350px;
+padding: 0px 40px 
+}
+.logo-footer{
+    background-color: #151414;
+    width: 160px; 
+}
+
+
+.primary {
+    height: 250px;
+    padding: 20px 0px;
+    width: 100%;
+    display: flex;
+}
+.content1 {
+    width: 40%;
+}
+.content2 , .content3 , .information {
+
+    width: 20%;
+    display: flex;
+    flex-direction:column ;
+    padding: 20px;
+    font-size: 15px;
+}
+.content2 span , .content3 span , .information span {
+     color : #fff;
+     padding: 0px 0px 10px 30px;
+}
+.content2 a , .content3 a , .information a{
+   color : #408bea;
+    text-decoration: none;
+    padding: 0px 0px 10px 30px;
+}
+.text-primary {
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    letter-spacing: 1px;
+    color: #ffffff99;
+    line-height: 1.5
+    
+}
+.text-primary p a  {
+    text-decoration: none;
+    color: #408bea;
+}
+.copy {
+
+    float:left ;
+    display: flex;
+    height: 100px;
+    padding: 40px 0px;
+    color: #fff;
+    
+}
+.copy p {
+    padding-left: 10px;
+    font-size: 13px;
+}
+.fmenu {
+
+    float:right ;
+    width: 200px;
+    height: 100px;
+    padding: 40px 0px;
+    display: flex;
+    justify-content: space-around;
+}
+.fmenu a:hover .fa-brands {
+    color: #408bea;
+}
+
+.fa-brands {
+    color: #fff;
+    
+    padding: 0px 10px ;
+    font-size: 13px;
+}
+.top-page {
+
 }
