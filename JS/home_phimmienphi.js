@@ -78,17 +78,30 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
+
+
 let icon = document.querySelectorAll(".fa-heart");
+
 for(let i = 0 ; i < icon.length ; i++) {
+    // Lấy trạng thái đã lưu từ localStorage
+    let color = localStorage.getItem(`icon_${i}`);
+    if (color) {
+        icon[i].style.color = color;
+    }
 
     icon[i].addEventListener("click" , function () {
         if(icon[i].style.color === "white") {
-            icon[i].style.color = "red"
+            icon[i].style.color = "red";
+            // Lưu trạng thái của icon vào localStorage
+            localStorage.setItem(`icon_${i}`, "red");
         } else {
-            icon[i].style.color = "white"
+            icon[i].style.color = "white";
+            // Lưu trạng thái của icon vào localStorage
+            localStorage.setItem(`icon_${i}`, "white");
         }
-    })
+    });
 }
+
 // Khôi phục dữ liệu sau khi tải lại trang
 window.onload = () => {
     let account = localStorage.getItem('currentUser');
@@ -98,5 +111,5 @@ window.onload = () => {
     } else {
         user.style.display = "flex";
         loginRegister.style.display = "none"
-    }
+    };
   };

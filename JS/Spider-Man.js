@@ -1,8 +1,41 @@
 
+let name0 = localStorage.getItem("currentUser");
+document.querySelector(".name").innerHTML = name0;
+let user = document.querySelector(".user0");
+let loginRegister = document.querySelector(".login_register")
+let logOut = document.querySelector(".text-log-out");
+
+// Khôi phục dữ liệu sau khi tải lại trang
+window.onload = () => {
+  let account = localStorage.getItem('currentUser');
+  if (account === null ) {
+      user.style.display = "none";
+      loginRegister.style.display = "flex"
+  } else {
+      user.style.display = "flex";
+      loginRegister.style.display = "none"
+  }
+};
+logOut.addEventListener('click' , function() {
+    if (localStorage.getItem('currentUser') !== null ) {
+        localStorage.removeItem('currentUser') ;
+        user.style.display = "none";
+        loginRegister.style.display = "flex"
+    } else {
+        user.style.display = "flex";
+        loginRegister.style.display = "none"
+    }
+})
+
+
+
+
+
+
 let submit = document.querySelector(".submit");
 let post_comment = document.getElementById("post-comment");
 let list_post_comment = document.querySelector(".list-comment");
-let username = document.getElementById("name");
+
 let comment = document.getElementById("comment");
 let number = document.querySelector(".number");
 let number_of_comments = document.querySelector(".number-of-comments")
@@ -52,7 +85,7 @@ $('.list-flim-hot').slick({
       // checkExistedUser(getListComment);
       if (checkComment(comment.value) == true) {
         getListComment.push({
-          username: username.value,
+          
           comment: comment.value,
         });
   
@@ -82,7 +115,9 @@ $('.list-flim-hot').slick({
                             
   <div class="content_info_container">
       <div class="date_userpost">
-          <span id="name">nhatmlnh</span>
+      <h3 class=" name ">
+      ${name0}
+      </h3>
 
       </div>
      
@@ -105,11 +140,18 @@ function checkComment(comment) {
         alert("Hãy nhập bình luận");
         return false;
     }
+    if(localStorage.getItem("currentUser") === null) {
+      alert("Hãy đăng nhập để bình luận")
+      return false
+    }
+
     return true
 }
+
+
+
 
 number = getListComment.length;
 
 number_of_comments.innerHTML = number + 1;
-
 
