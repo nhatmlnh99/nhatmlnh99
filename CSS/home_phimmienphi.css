@@ -12,16 +12,20 @@ html {
     color: #fff
 }
 
+.red {
+    color: red;
+}
+
 .header {
     width: 100%;
     height: 70px;
     background-color: #000;
     position: fixed;
-    top : 0 ;
+    top: 0;
     display: flex;
     padding: 0px 150px 0px 150px;
     z-index: 1000;
-    
+
 }
 
 .logo {
@@ -71,51 +75,125 @@ html {
 }
 
 .item:hover .text-item,
-.item:hover .fa-caret-down , .icon2:hover .fa-magnifying-glass ,
-.sub-item:hover a 
- {
+.item:hover .fa-caret-down,
+.icon2:hover .fa-magnifying-glass,
+.sub-item:hover a {
     color: #408bea
 }
+
 .menu-item {
     position: relative;
 }
-.menu-item:hover .sub-menu{
+
+.menu-item:hover .sub-menu {
     display: flex;
 }
-.sub-menu {  
+
+.sub-menu {
     top: 70px;
     position: absolute;
     width: 450px;
     height: 300px;
-    background-color: #000;   
+    background-color: #000;
     flex-wrap: wrap;
-    display: none;  
+    display: none;
 }
+
 .sub-item {
-   list-style: none;
-   width: 50%;
-   height: 20%;
-   display: flex;
-   justify-content: start;
-   align-items: center;
-   padding-left: 40px;
+    list-style: none;
+    width: 50%;
+    height: 20%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding-left: 40px;
 }
+
+.login_register {
+    height: 70px;
+    margin-left: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+    display: none;
+}
+.login_register a {
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+}
+.login_register a:hover {
+    color: #408bea;
+}
+.icon-lr {
+    margin: 0px 5px ;
+}
+
+.user0 {
+
+    height: 70px;
+    margin-left: 135px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    cursor: pointer;
+     /* display: none;  */
+}
+
+.user0:hover .name {
+    color: #408bea;
+}
+
+.user0:hover .log-out {
+    display: flex;
+}
+
+.username {
+    margin-right: 5px;
+    position: relative;
+
+}
+
+.fa-circle-user {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.log-out {
+    width: 120px;
+    height: 50px;
+    position: absolute;
+    top: 40px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    display: none;
+}
+
+.log-out:hover .text-log-out {
+    color: red;
+}
+
 .search {
     width: 340px;
     height: 40px;
-    margin: 15px 0px 15px 256px ;
+    margin: 15px 0px 15px 6px;
     line-height: 40px;
     border-radius: 5px;
-    
+
 }
 
 .search .input_search {
-    background-color: #2D2D2D; 
-     /* background: rgba(255, 255, 255, .19);  */
+    background-color: #2D2D2D;
+    /* background: rgba(255, 255, 255, .19);  */
     width: 100%;
     border-radius: 5px;
     position: relative;
 }
+
 .input_search input {
     outline: none;
     border: 0;
@@ -125,24 +203,26 @@ html {
     background-color: transparent;
     width: 100%;
     height: 40px;
-    box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+    box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
 
-    
+
 }
+
 .input_search .icon2 {
-    color : #fff;
+    color: #fff;
     height: 40px;
     width: 40px;
     line-height: 40px;
     position: absolute;
-    top : 0 ;
+    top: 0;
     right: 0;
     cursor: pointer;
     text-align: center;
     font-size: 18px;
 }
+
 .input_search .menu-key {
-    padding: 0px; 
+    padding: 0px;
     overflow-y: auto;
     display: none;
 }
@@ -159,42 +239,47 @@ html {
     width: 100%;
     cursor: pointer;
     border-radius: 3px;
-    
+
 }
 
 .menu-key .keyword a {
     color: #fff;
     text-decoration: none;
 }
+
 .keyword:hover a {
     color: #408bea;
 }
+
 .menu-key li:hover {
-     background-color: #efefef; 
+    background-color: #efefef;
 }
 
 .my-container {
     width: 100%;
-    background-color: #424040; 
-    padding: 0px 150px  75px 150px;
-   margin-top: 70px;
-    
+    background-color: #424040;
+    padding: 0px 150px 75px 150px;
+    margin-top: 70px;
+
 }
+
 .content {
     width: 100%;
     background-color: #151414;
-    height: 2000px;
+
     padding: 20px;
-    
+
 }
 
 .text-slider {
     padding: 20px;
 }
+
 .text-slider h3 {
     padding-left: 10px;
-    border-left: 5px solid #408bea ;
+    border-left: 3px solid #408bea;
 }
+
 .img-slider {
     max-width: 100%;
     height: 550px;
@@ -202,129 +287,242 @@ html {
 }
 
 /* thiết lập style cho slideshow container */
- .slideshow-container {
-   max-width: 100%;
-   position: relative;
-   margin: auto;
-   
- }
+.slideshow-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+
+}
+
 /* ẩn hình ảnh cho phần tử slideshow */
- .mySlides {
-   display: none;
- }
+.mySlides {
+    display: none;
+}
+
 /* thiết kế nút mũi tên*/
- .prev, .next {
-   cursor: pointer;
-   position: absolute;
-   top: 50%;
-   width: auto;
-   margin-top: -22px;
-   padding: 16px;
-   color: white;
-   font-weight: bold;
-   font-size: 18px;
-   transition: 0.6s ease;
-   border-radius: 0 3px 3px 0;
-   user-select: none;
- }
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
 /* thiết kế nút mũi tên next nằm phía bên phải */
- .next {
-   right: 0;
-   border-radius: 3px 0 0 3px;
- }
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
 /* hiệu ứng thay đổi background khi hover vào nút mũi tên*/
- .prev:hover, .next:hover {
-   background-color: rgba(0,0,0,0.8);
- }
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 /* Thiết lập style cho nội dung của mỗi phần tử slideshow */
- .text {
-   color: #f2f2f2;
-   font-size: 20px;
-   padding: 8px 12px;
-   position: absolute;
-   bottom: 8px;
-   width: 100%;
-   text-align: center;
- }
+.text {
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
 /* Thiết lập style cho số hiển thị của phần tử */
- .numbertext {
-   color: #f2f2f2;
-   font-size: 12px;
-   padding: 8px 12px;
-   position: absolute;
-   top: 0;
- }
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
 /* thiết lập style  nút tròn điều khiển*/
- .dot {
-   cursor: pointer;
-   height: 15px;
-   width: 15px;
-   margin: 0 2px;
-   background-color: #bbb;
-   border-radius: 50%;
-   display: inline-block;
-   transition: background-color 0.6s ease;
- }
-.active, .dot:hover {
-   background-color: #717171;
- }
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
 /* tạo hiệu ứng chuyển động fade */
- .fade {
-   -webkit-animation-name: fade;
-   -webkit-animation-duration: 1.5s;
-   animation-name: fade;
-   animation-duration: 1.5s;
- }
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
 @-webkit-keyframes fade {
-   from {opacity: .4}
-   to {opacity: 1}
- }
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 @keyframes fade {
-   from {opacity: .4}
-   to {opacity: 1}
- }
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
 .main {
     width: 100%;
     display: flex;
     margin: 0px 0px 100px 0px;
-    
+
 }
 
 .content-main {
     width: 20%;
-    height:300px ;
+    height: 300px;
     margin: 0px 10px;
 }
+
+.content-main .frame a .img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+}
+
+.content-main .frame {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.zoom-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.zoom-overlay {
+    width: 100%;
+    height: 100%;
+}
+
+.frame:hover .zoom-overlay {
+    opacity: 1;
+
+}
+
+.frame:hover img {
+    transform: scale(1.2);
+}
+
+
 .content-main .text-content {
     margin: 20px 0px 40px;
     width: 100%;
+    position: relative;
+
+
 
 }
+
 .text-content a {
     text-decoration: none;
     color: #fff;
     font-size: 17px;
-    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+
+
 }
+
+.text-content a:hover {
+    color: #408bea;
+}
+
 .text-content span {
     color: #FFFFFF80;
     font-size: 15px;
 }
 
+.favourite {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.favourite .fa-heart {
+    color: white;
+    cursor: pointer;
+}
 
 
+.next-page {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 
+.next-page button {
+    width: 120px;
+    height: 30px;
+    background-color: #408bea;
+    border-radius: 5px;
+    border: 0px;
+    color: #fff;
+    margin: 0px 10px 0px 10px;
+    cursor: pointer;
+}
+
+.fa-angles-right {
+    margin: 0px 10px 0px 10px;
+}
 
 /* footer */
 .footer {
-width: 100%;
-background-color: #151414;
-height: 350px;
-padding: 0px 40px 
-}
-.logo-footer{
+    width: 100%;
     background-color: #151414;
-    width: 160px; 
+    height: 350px;
+    padding: 0px 40px
+}
+
+.logo-footer {
+    background-color: #151414;
+    width: 160px;
 }
 
 
@@ -334,70 +532,84 @@ padding: 0px 40px
     width: 100%;
     display: flex;
 }
+
 .content1 {
     width: 40%;
 }
-.content2 , .content3 , .information {
+
+.content2,
+.content3,
+.information {
 
     width: 20%;
     display: flex;
-    flex-direction:column ;
+    flex-direction: column;
     padding: 20px;
     font-size: 15px;
 }
-.content2 span , .content3 span , .information span {
-     color : #fff;
-     padding: 0px 0px 10px 30px;
+
+.content2 span,
+.content3 span,
+.information span {
+    color: #fff;
+    padding: 0px 0px 10px 30px;
 }
-.content2 a , .content3 a , .information a{
-   color : #408bea;
+
+.content2 a,
+.content3 a,
+.information a {
+    color: #408bea;
     text-decoration: none;
     padding: 0px 0px 10px 30px;
 }
+
 .text-primary {
     width: 100%;
     padding: 0px 20px 20px 20px;
     letter-spacing: 1px;
     color: #ffffff99;
     line-height: 1.5
-    
 }
-.text-primary p a  {
+
+.text-primary p a {
     text-decoration: none;
     color: #408bea;
 }
+
 .copy {
 
-    float:left ;
+    float: left;
     display: flex;
     height: 100px;
     padding: 40px 0px;
     color: #fff;
-    
+
 }
+
 .copy p {
     padding-left: 10px;
     font-size: 13px;
 }
+
 .fmenu {
 
-    float:right ;
+    float: right;
     width: 200px;
     height: 100px;
     padding: 40px 0px;
     display: flex;
     justify-content: space-around;
 }
+
 .fmenu a:hover .fa-brands {
     color: #408bea;
 }
 
 .fa-brands {
     color: #fff;
-    
-    padding: 0px 10px ;
+
+    padding: 0px 10px;
     font-size: 13px;
 }
-.top-page {
 
-}
+.top-page {}

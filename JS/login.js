@@ -2,6 +2,11 @@ let input_username = document.querySelector('.username');
 let input_password = document.querySelector('.password');
 let login_btn = document.querySelector('.button');
 
+
+
+
+
+
 function checkUser(input_username, input_password, list_user_registered) {
     let isUserExist = false;
     for (let i = 0; i < list_user_registered.length; i++) {
@@ -39,8 +44,11 @@ login_btn.addEventListener("click", function (event) {
             input_password.value,
             list_user_registered
         );
+        localStorage.setItem("currentUser" , input_username.value)
         input_username.value = "";
         input_password.value = "";
     }
    
+
+
 });
